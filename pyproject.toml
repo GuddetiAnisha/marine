@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marine-entity-bridge"
+version = "0.1.0"
+description = "Simulated CAN and Zigbee entity bridge thesis proof of concept"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pydantic-settings>=2,<3"]
+
+[project.optional-dependencies]
+mqtt = ["paho-mqtt>=2,<3"]
+test = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bridge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
