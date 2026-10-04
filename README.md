@@ -1,6 +1,6 @@
 # Marine Entity Bridge — simulated Master thesis PoC
 
-This independent educational prototype is inspired by a public Volvo Penta thesis description. It contains no Volvo code, data, hardware integration, or validated marine-network behavior. Both adapters are deterministic simulations.
+
 
 The central demonstration is **one API operation, two protocols**: `PUT /api/v1/entities/{entity_id}/light` with `{"on":true}` controls either simulated light by changing only the entity ID. A common entity model exposes protocol, address, capability, and current state. Two temperature sensors and one switch demonstrate read-only entities.
 
